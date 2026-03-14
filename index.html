@@ -25,7 +25,7 @@ background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
 url("https://images.unsplash.com/photo-1555992336-03a23c7b20ee");
 background-size:cover;
 background-position:center;
-height:550px;
+height:600px;
 color:white;
 display:flex;
 flex-direction:column;
@@ -35,14 +35,13 @@ text-align:center;
 }
 
 header h1{
-font-size:60px;
+font-size:65px;
 animation:fadeDown 1.2s;
 }
 
 header p{
-font-size:22px;
+font-size:24px;
 margin-top:10px;
-animation:fadeUp 1.5s;
 }
 
 button{
@@ -67,6 +66,8 @@ nav{
 background:#111;
 padding:15px;
 text-align:center;
+position:sticky;
+top:0;
 }
 
 nav a{
@@ -79,8 +80,17 @@ font-weight:bold;
 /* SECTIONS */
 
 section{
-padding:80px;
+padding:90px;
 text-align:center;
+}
+
+/* ABOUT */
+
+.about{
+max-width:800px;
+margin:auto;
+font-size:18px;
+line-height:1.6;
 }
 
 /* MENU */
@@ -106,10 +116,6 @@ transition:0.3s;
 transform:translateY(-10px);
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
 /* GALERIA */
 
 .gallery{
@@ -130,6 +136,23 @@ transition:0.3s;
 transform:scale(1.05);
 }
 
+/* CHEFS */
+
+.chefs{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.chef{
+background:white;
+padding:20px;
+width:250px;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.1);
+}
+
 /* TESTIMONIOS */
 
 .testimonials{
@@ -148,6 +171,32 @@ border-radius:10px;
 box-shadow:0 6px 15px rgba(0,0,0,0.1);
 }
 
+/* ESTADISTICAS */
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+font-size:22px;
+}
+
+/* FORMULARIO */
+
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea{
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
 /* FOOTER */
 
 footer{
@@ -157,15 +206,8 @@ padding:40px;
 text-align:center;
 }
 
-/* ANIMACIONES */
-
 @keyframes fadeDown{
 from{opacity:0; transform:translateY(-40px);}
-to{opacity:1; transform:translateY(0);}
-}
-
-@keyframes fadeUp{
-from{opacity:0; transform:translateY(40px);}
 to{opacity:1; transform:translateY(0);}
 }
 
@@ -178,19 +220,32 @@ to{opacity:1; transform:translateY(0);}
 
 <h1>La Parrilla Dorada</h1>
 <p>Los mejores sabores a la parrilla</p>
-
-<button>Ver menú</button>
+<button>Explorar menú</button>
 
 </header>
 
 <nav>
 
+<a href="#sobre">Sobre</a>
 <a href="#menu">Menú</a>
 <a href="#galeria">Galería</a>
+<a href="#chefs">Chefs</a>
 <a href="#opiniones">Opiniones</a>
 <a href="#contacto">Contacto</a>
 
 </nav>
+
+<section id="sobre">
+
+<h2>Sobre Nosotros</h2>
+
+<p class="about">
+La Parrilla Dorada es un restaurante especializado en carnes a la parrilla,
+hamburguesas gourmet y platos tradicionales preparados con ingredientes frescos.
+Nuestro objetivo es ofrecer una experiencia gastronómica memorable para cada cliente.
+</p>
+
+</section>
 
 <section id="menu">
 
@@ -200,12 +255,14 @@ to{opacity:1; transform:translateY(0);}
 
 <div class="card"><h3>Asado Premium</h3><p>$18</p></div>
 <div class="card"><h3>Hamburguesa BBQ</h3><p>$10</p></div>
-<div class="card"><h3>Choripán</h3><p>$6</p></div>
 <div class="card"><h3>Costillas BBQ</h3><p>$16</p></div>
+<div class="card"><h3>Choripán</h3><p>$6</p></div>
 <div class="card"><h3>Papas fritas</h3><p>$4</p></div>
-<div class="card"><h3>Ensalada fresca</h3><p>$5</p></div>
 <div class="card"><h3>Pizza artesanal</h3><p>$12</p></div>
 <div class="card"><h3>Empanadas</h3><p>$5</p></div>
+<div class="card"><h3>Milanesa completa</h3><p>$11</p></div>
+<div class="card"><h3>Ensalada fresca</h3><p>$5</p></div>
+<div class="card"><h3>Sandwich gourmet</h3><p>$8</p></div>
 
 </div>
 
@@ -226,46 +283,6 @@ to{opacity:1; transform:translateY(0);}
 
 </section>
 
-<section id="opiniones">
+<section id="chefs">
 
-<h2>Opiniones de Clientes</h2>
-
-<div class="testimonials">
-
-<div class="review">
-<p>"La mejor parrilla que probé."</p>
-<b>- Carlos</b>
-</div>
-
-<div class="review">
-<p>"Excelente comida y ambiente."</p>
-<b>- María</b>
-</div>
-
-<div class="review">
-<p>"Hamburguesas increíbles."</p>
-<b>- Javier</b>
-</div>
-
-</div>
-
-</section>
-
-<section id="contacto">
-
-<h2>Contacto</h2>
-
-<p>Dirección: Avenida Central 456</p>
-<p>Teléfono: +54 3825430068</p>
-<p>Email: lukhapro09@gmail.com</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 La Parrilla Dorada</p>
-
-</footer>
-
-</body>
-</html>
+<h2>Nuestros Chefs</h
